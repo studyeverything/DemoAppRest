@@ -4,6 +4,7 @@ public class BaseResponse {
     public static final String OK = "OK";
     public static final String FAILED = "FAILED";
     public static final String NOT_REGISTER = "NOT_REGISTER";
+    public static final String UNKNOWN = "UNKNOWN";
 
     private String resultCode = "";
     private String errorMessage = "";

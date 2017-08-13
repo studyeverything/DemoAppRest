@@ -7,6 +7,15 @@ public class BookCategory {
     public BookCategory() {
     }
 
+    @Override
+    public String toString() {
+        return "BookCategory{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
+
+
     // Getter and Setter
 
     public long getId() {
