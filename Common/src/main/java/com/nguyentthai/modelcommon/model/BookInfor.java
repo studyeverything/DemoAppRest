@@ -26,7 +26,7 @@ public class BookInfor implements RowMapper {
     @Override
     public BookInfor mapRow(ResultSet resultSet, int i) throws SQLException {
         BookCategory bookCategory = new BeanPropertyRowMapper<BookCategory>(BookCategory.class).mapRow(resultSet, i);
-        BookInfor bookInfor = new BeanPropertyRowMapper<>(BookInfor.class).mapRow(resultSet, i);
+        BookInfor bookInfor = new BeanPropertyRowMapper<BookInfor>(BookInfor.class).mapRow(resultSet, i);
         bookInfor.setBookCategory(bookCategory);
         return bookInfor;
     }

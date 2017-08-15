@@ -1,6 +1,6 @@
 package com.nguyentthai.rest.controller;
 
-import com.nguyentthai.modelcommon.exception.DaoException;
+import com.nguyentthai.rest.exception.DaoException;
 import com.nguyentthai.modelcommon.exception.MyException;
 import com.nguyentthai.modelcommon.model.BookCategory;
 import com.nguyentthai.modelcommon.model.BookInfor;

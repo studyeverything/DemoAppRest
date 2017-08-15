@@ -1,6 +1,6 @@
 package com.nguyentthai.rest.dao;
 
-import com.nguyentthai.modelcommon.exception.DaoException;
+import com.nguyentthai.rest.exception.DaoException;
 import com.nguyentthai.modelcommon.exception.MyException;
 import com.nguyentthai.modelcommon.model.BookCategory;
 import com.nguyentthai.modelcommon.model.BookInfor;
@@ -12,7 +12,6 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Transactional
@@ -34,8 +33,9 @@ public class BookDao {
                 daoException = new DaoException();
                 daoException.setResultCode(MyException.OK);
             } else {
-                daoException = new DaoException(MyException.insertResualtFailed);
+                daoException = new DaoException();
                 daoException.setResultCode(MyException.FAILED);
+                daoException.setErrorMessage(MyException.insertResualtFailed);
                 log.error("Resual update query JDBC template res:" + res +" category:"+bookCategory.toString());
             }
         } catch (Exception e) {
@@ -73,8 +73,9 @@ public class BookDao {
                 daoException = new DaoException();
                 daoException.setResultCode(MyException.OK);
             } else {
-                daoException = new DaoException(MyException.insertResualtFailed);
+                daoException = new DaoException();
                 daoException.setResultCode(MyException.FAILED);
+                daoException.setErrorMessage(MyException.insertResualtFailed);
                 log.error("Resual insert bookInfor query JDBC template res:" + res +"bookInfor"+bookInfor.toString());
             }
         } catch (Exception e) {

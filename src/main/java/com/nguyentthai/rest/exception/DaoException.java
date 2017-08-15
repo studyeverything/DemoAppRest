@@ -1,6 +1,8 @@
-package com.nguyentthai.modelcommon.exception;
+package com.nguyentthai.rest.exception;
 
-public class DaoException extends Exception implements MyException{
+import com.nguyentthai.modelcommon.exception.MyException;
+
+public class DaoException implements MyException {
 
     private String resultCode = "";
     private String errorMessage = "";
@@ -8,18 +10,18 @@ public class DaoException extends Exception implements MyException{
 
     public DaoException() {
     }
-
-    public DaoException(String message) {
-        super(message);
-        this.errorMessage=message;
-        this.resultCode=MyException.FAILED;
-    }
-
-    public DaoException(String message, Throwable cause) {
-        super(message, cause);
-        this.errorMessage=message;
-        this.resultCode=MyException.FAILED;
-    }
+//
+//    public DaoException(String message) {
+//        super(message);
+//        this.errorMessage=message;
+//        this.resultCode=MyException.FAILED;
+//    }
+//
+//    public DaoException(String message, Throwable cause) {
+//        super(message, cause);
+//        this.errorMessage=message;
+//        this.resultCode=MyException.FAILED;
+//    }
 
     //Getter and Setter
 
